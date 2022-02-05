@@ -1,4 +1,4 @@
-package com.mksherbini.util;
+package com.mksherbini.scrapper.util;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import lombok.Getter;

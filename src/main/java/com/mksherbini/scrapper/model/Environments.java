@@ -1,4 +1,4 @@
-package com.mksherbini.model;
+package com.mksherbini.scrapper.model;
 
 public enum Environments {
     ALL,

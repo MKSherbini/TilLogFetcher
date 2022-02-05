@@ -1,8 +1,8 @@
-package com.mksherbini;
+package com.mksherbini.scrapper;
 
-import com.mksherbini.util.Timer;
-import com.mksherbini.model.Configuration;
-import com.mksherbini.model.Environments;
+import com.mksherbini.scrapper.util.Timer;
+import com.mksherbini.scrapper.model.Configuration;
+import com.mksherbini.scrapper.model.Environments;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import lombok.extern.slf4j.Slf4j;
@@ -12,6 +12,7 @@ import javax.xml.XMLConstants;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
+import java.io.File;
 
 @Slf4j
 public class Runner {
@@ -58,10 +59,11 @@ public class Runner {
                     .newInstance(Configuration.class)
                     .createUnmarshaller();
             unMarshaller.setSchema(schema);
+
             return (Configuration) unMarshaller
-                    .unmarshal(this.getClass().getClassLoader().getResourceAsStream(XML_CONFIG_PATH));
+                    .unmarshal(new File(XML_CONFIG_PATH));
         } catch (JAXBException | SAXException e) {
-            log.error("Failed to load config.xml file, config.xml file has to exist as a resource and have valid content");
+            log.error("Failed to load config.xml file, config.xml file should exist beside jar and have valid contents.");
         }
         return null;
     }

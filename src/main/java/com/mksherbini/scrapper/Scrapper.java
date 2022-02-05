@@ -1,9 +1,9 @@
-package com.mksherbini;
+package com.mksherbini.scrapper;
 
-import com.mksherbini.model.Environments;
-import com.mksherbini.util.DriverProvider;
-import com.mksherbini.util.FileDownloader;
-import com.mksherbini.util.Timer;
+import com.mksherbini.scrapper.model.Environments;
+import com.mksherbini.scrapper.util.DriverProvider;
+import com.mksherbini.scrapper.util.FileDownloader;
+import com.mksherbini.scrapper.util.Timer;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.*;
 

@@ -1,4 +1,4 @@
-package com.mksherbini.util;
+package com.mksherbini.scrapper.util;
 
 import lombok.extern.slf4j.Slf4j;
 

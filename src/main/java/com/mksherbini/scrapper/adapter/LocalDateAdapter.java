@@ -1,4 +1,4 @@
-package com.mksherbini.adapter;
+package com.mksherbini.scrapper.adapter;
 
 import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 

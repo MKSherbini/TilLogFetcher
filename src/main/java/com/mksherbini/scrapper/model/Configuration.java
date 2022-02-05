@@ -1,6 +1,6 @@
-package com.mksherbini.model;
+package com.mksherbini.scrapper.model;
 
-import com.mksherbini.adapter.LocalDateAdapter;
+import com.mksherbini.scrapper.adapter.LocalDateAdapter;
 import jakarta.xml.bind.annotation.*;
 import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import lombok.Data;
