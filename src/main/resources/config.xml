@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<configuration xmlns="MKSherbini"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="MKSherbini config.xsd">
+    <!--  Accepted date format is "yyyy-MM-dd"-->
+    <date>2022-02-05</date>
+    <!--  Accepted values are: All, T1_EMS, T3_EMS, T4_EMS, T7_EMS-->
+    <environment>T3_EMS</environment>
+    <correlationIds>
+        <id>ICCIR3Test06-PB-01.438F600B675115E07</id>
+    </correlationIds>
+</configuration>

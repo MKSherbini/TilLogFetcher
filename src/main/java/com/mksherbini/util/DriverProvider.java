@@ -1,4 +1,4 @@
-package com.mksherbini;
+package com.mksherbini.util;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import lombok.Getter;
@@ -10,17 +10,20 @@ import java.time.Duration;
 
 public class DriverProvider {
     @Getter
-    private WebDriver driver;
-    private boolean isVisible = false;
+    private final WebDriver driver;
 
     public DriverProvider() {
-        WebDriverManager.edgedriver().setup();
-        driver = new EdgeDriver(getFirefoxOptions());
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofMinutes(1));
+        this(false);
     }
 
-    private EdgeOptions getFirefoxOptions() {
+    public DriverProvider(boolean isVisible) {
+        WebDriverManager.edgedriver().setup();
+        driver = new EdgeDriver(getFirefoxOptions(isVisible));
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+    }
+
+    private EdgeOptions getFirefoxOptions(boolean isVisible) {
         var options = new EdgeOptions();
         options.setHeadless(!isVisible);
         return options;
